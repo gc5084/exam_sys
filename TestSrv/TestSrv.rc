@@ -1,0 +1,385 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAIN_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "系统"
+    BEGIN
+        MENUITEM "加载考生信息",                ID_LOADSTU
+        MENUITEM "启动考试",                    ID_START
+        MENUITEM SEPARATOR
+        MENUITEM "重置考试",                    ID_RESET
+        MENUITEM "退出考试系统",                ID_EXITTEST
+    END
+    POPUP "操作"
+    BEGIN
+        MENUITEM "查询人数",                    ID_NPERSON
+        MENUITEM "刷新",                        ID_REPAINT
+        MENUITEM SEPARATOR
+        MENUITEM "禁止未登录考生登录",          ID_FORBID
+        MENUITEM "向所有考生发送消息",          ID_SENDINFOR
+    END
+    POPUP "评分"
+    BEGIN
+        MENUITEM "当前批次评分",                ID_CHECKALL
+        MENUITEM SEPARATOR
+        MENUITEM "显示评分结果",                ID_CHECKSHOW
+        MENUITEM "显示零分考生",                ID_CHECKSHOWZERO
+    END
+    POPUP "导出"
+    BEGIN
+        MENUITEM "导出考生成绩单到excel",       ID_OUTEXCEL
+    END
+    POPUP "工具"
+    BEGIN
+        MENUITEM "启动试题管理系统",            ID_TOOLDATA
+        MENUITEM "锁定程序界面",                ID_LOCK
+    END
+    POPUP "帮助"
+    BEGIN
+        MENUITEM "关于",                        ID_HELPABOUT
+        MENUITEM "使用说明",                    ID_HELPTXT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TIMEDLG DIALOG DISCARDABLE  0, 0, 198, 115
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "考试时间对话框"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确认",IDOK,134,31,41,14
+    PUSHBUTTON      "取消",IDCANCEL,133,62,42,14
+    EDITTEXT        IDC_EDIT_TIME,19,54,79,16,ES_AUTOHSCROLL
+    LTEXT           "请输入这场考试的时间",IDC_STATIC,19,31,80,12
+    LTEXT           ":分钟",IDC_STATIC,101,57,23,15
+END
+
+IDD_CHECKDLG DIALOG DISCARDABLE  0, 0, 274, 117
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "批阅成绩"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "开始",IDOK,63,83,50,14
+    PUSHBUTTON      "取消",IDCANCEL,151,83,50,14
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",PBS_SMOOTH | 
+                    WS_BORDER,41,49,186,20
+    LTEXT           "",IDC_TEXT,43,34,71,8
+END
+
+IDD_TESTINFOR DIALOG DISCARDABLE  0, 0, 308, 289
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "考生试卷信息"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDITTEST,85,75,207,199,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL
+    COMBOBOX        IDC_CBLIST,15,67,60,124,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "考生答案：",IDC_STATIC,85,57,43,13
+    EDITTEXT        IDC_EDITPK,15,214,60,19,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "对应试题序号：",IDC_STATIC,15,195,61,15
+    LTEXT           "说明：若想查看具体的试题信息，可以在工具菜单中选择启动试题库管理系统，根据相应试题序号进行查看。",
+                    IDC_STATIC,85,29,201,24
+    LTEXT           "选择试题：",IDC_STATIC,15,51,52,11
+END
+
+IDD_STUINFOR DIALOG DISCARDABLE  0, 0, 304, 261
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "考生基本信息"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDITNAME,109,62,135,21,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "考生学号：",IDC_STATIC,32,25,41,13
+    LTEXT           "考生姓名：",IDC_STATIC,32,63,40,13
+    LTEXT           "考生  IP：",IDC_STATIC,32,131,41,13
+    LTEXT           "考生状态：",IDC_STATIC,32,95,40,13
+    LTEXT           "考生套接字：",IDC_STATIC,32,163,53,13
+    EDITTEXT        IDC_EDITNUM,109,24,135,21,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDITSTATE,109,92,135,21,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDITSOCKET,109,161,135,21,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_EDITIP,109,128,135,21,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_POINTINFOR DIALOG DISCARDABLE  0, 0, 301, 279
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "考生成绩信息"
+FONT 9, "宋体"
+BEGIN
+    LISTBOX         IDC_LISTBOX,19,36,261,224,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "标题",IDC_TITLE,22,18,233,14
+END
+
+IDD_LISTCTRL DIALOG DISCARDABLE  0, 0, 563, 329
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "学生成绩列表单"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,256,296,50,14
+    CONTROL         "List6",IDC_LIST,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,23,46,518,241
+    LTEXT           "说明 ：试题列为0代表没有这个试题，为1代表考生作答正确，为2代表考生作答错误。",
+                    IDC_STATIC,25,21,422,18
+END
+
+IDD_MUCHTEST DIALOG DISCARDABLE  0, 0, 236, 201
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "出题个数对话框"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,86,172,50,14
+    LTEXT           "填空题个数：",IDC_STATIC,33,67,53,18
+    LTEXT           "改错题个数：",IDC_STATIC,33,98,53,18
+    LTEXT           "设计题个数：",IDC_STATIC,33,129,53,18
+    EDITTEXT        IDC_EDITFILL,87,65,53,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITMODIFY,87,95,53,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITDESIGN,87,128,53,14,ES_AUTOHSCROLL
+    LTEXT           "static",IDC_TEXTFILL,151,66,40,15
+    LTEXT           "static",IDC_TEXTMODIFY,151,97,39,14
+    LTEXT           "static",IDC_TEXTDESIGN,151,127,41,16
+    LTEXT           "请输入本次考试每位考生作答试题的数量，\r\n注意应使总数大于1",
+                    IDC_STATIC,26,19,194,19
+    GROUPBOX        "输入",IDC_STATIC,23,51,179,112
+END
+
+IDD_SELECTTEST DIALOG DISCARDABLE  0, 0, 333, 317
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "试题库筛选对话框"
+FONT 9, "宋体"
+BEGIN
+    COMBOBOX        IDC_COMBOBOX,136,84,43,99,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "确定",IDOK,130,283,50,14
+    LISTBOX         IDC_SELECT,18,67,110,200,LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_UNSELECT,186,66,125,206,LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "—>",IDC_DELECT,146,139,24,14
+    PUSHBUTTON      "<—",IDC_ADD,146,183,24,14
+    LTEXT           "本次考试中将出现的试题",IDC_STATIC,19,48,88,14
+    LTEXT           "本次考试中不会出现的试题",IDC_STATIC,189,52,111,8
+    LTEXT           "试题类型",IDC_STATIC,134,66,45,12
+    LTEXT           "剔除试题",IDC_STATIC,142,128,34,11
+    LTEXT           "恢复",IDC_STATIC,149,171,21,12
+    LTEXT           "请将不想在本次考试中出现的试题在左边的列表框中选中然后按剔除键剔除到右边的对话框，注音先选择试题类型",
+                    IDC_STATIC,75,17,170,26
+    GROUPBOX        "说明",IDC_STATIC,49,7,225,38
+END
+
+IDD_TALK DIALOG DISCARDABLE  0, 0, 298, 187
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "发送消息对话框"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "发送",IDOK,67,150,50,14
+    PUSHBUTTON      "取消",IDCANCEL,164,150,50,14
+    EDITTEXT        IDC_CONTENT,27,49,236,77,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL | WS_HSCROLL
+    LTEXT           "发往客户端的内容：",IDC_STATIC,28,30,120,12
+END
+
+IDD_LOCK DIALOG DISCARDABLE  0, 0, 232, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "锁定程序对话框"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "锁定",IDOK,51,125,50,14
+    PUSHBUTTON      "取消",IDCANCEL,125,126,50,14
+    LTEXT           "锁定密码：",IDC_STATIC,29,58,45,9
+    LTEXT           "密码确认：",IDC_STATIC,29,85,44,8
+    EDITTEXT        IDC_PASSWORD,81,50,80,18,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_REPASS,81,79,80,18,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_UNLOCK DIALOG DISCARDABLE  0, 0, 179, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "锁定"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "解锁",IDOK,63,81,50,14
+    LTEXT           "解锁密码：",IDC_STATIC,15,52,41,8
+    EDITTEXT        IDC_EDITPASS,63,47,88,18,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "请输入解锁密码进行解锁",IDC_STATIC,48,18,92,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_TIMEDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 191
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_CHECKDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 267
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_TESTINFOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 282
+    END
+
+    IDD_STUINFOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 297
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 254
+    END
+
+    IDD_POINTINFOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 294
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 272
+    END
+
+    IDD_LISTCTRL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 556
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 322
+    END
+
+    IDD_MUCHTEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_SELECTTEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 326
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 310
+    END
+
+    IDD_TALK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 291
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 180
+    END
+
+    IDD_LOCK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_UNLOCK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 172
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICONMAIN            ICON    DISCARDABLE     "精美电脑图标下载34.ico"
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

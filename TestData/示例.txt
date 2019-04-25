@@ -1,0 +1,80 @@
+试题说明：
+完成函数max 函数功能为返回将一整数数组中的最大值。
+
+试题内容：
+#include <iostream.h>
+
+
+
+int main()
+{
+   int max(int arr[],int n);
+   int arr[5] = {67,34,5,87,12};
+   cout<< max(arr,5);  
+   return 1;
+}
+/***found***/
+int max(int arr[],int n)
+{   
+}
+/***end***/
+
+
+试题答案：
+
+/***found***/
+int max(int arr[],int n)
+{
+  int nmax = arr[0];
+ for(int i =0;i<5;i++)
+    {
+        if(arr[i] > nmax)
+          nmax = arr[i];    
+    }
+return nmax;   
+}
+
+/***end***/
+
+阅卷内容：
+
+#include <string.h>
+#include <iostream.h>
+#include<fstream.h>
+
+int main()
+{
+   int max(int arr[],int n);
+   int arr[5] = {22,33,66,55,32};
+   int nOut;
+   nOut = max(arr,5);
+   ofstream fout("answer.txt");
+   fout<<nOut;
+   fout.close();
+   cout<<nOut;
+   return 1;
+
+}
+/***found***/
+
+/***end***/
+
+
+
+阅卷输出
+
+66
+
+备注：
+
+示例题型
+
+
+
+
+
+
+
+
+
+/***end***/

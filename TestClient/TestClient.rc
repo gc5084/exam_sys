@@ -1,0 +1,288 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\TestClient.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 230, 83
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 客户端"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,13,21,21,21
+    LTEXT           "在线考试系统 1.0 版",IDC_STATIC,40,21,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) \n咸阳师范学院图形研究所",IDC_STATIC,39,39,
+                    117,21
+    DEFPUSHBUTTON   "确定",IDOK,159,34,50,14,WS_GROUP
+END
+
+IDD_TESTCLIENT_DIALOG DIALOGEX 0, 0, 462, 303
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "C++在线考试系统-客户端"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "查看",IDC_LOOK_FILL_1,39,64,31,14
+    EDITTEXT        IDC_TITLEINFO,28,135,417,142,ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    LTEXT           "试题说明：",IDC_STATIC,33,119,62,12
+    GROUPBOX        "填空题",IDC_STATIC,28,39,136,70
+    GROUPBOX        "第一题",IDC_STATIC,33,52,42,50
+    GROUPBOX        "第二题",IDC_STATIC,79,52,38,50
+    GROUPBOX        "第三题",IDC_STATIC,121,53,40,50
+    PUSHBUTTON      "答题",IDC_ANSWER_FILL_1,39,83,31,14
+    PUSHBUTTON      "查看",IDC_LOOK_FILL_2,82,64,31,14
+    PUSHBUTTON      "答题",IDC_ANSWER_FILL_2,82,84,31,14
+    PUSHBUTTON      "答题",IDC_ANSWER_FILL_3,125,84,31,14
+    PUSHBUTTON      "查看",IDC_LOOK_FILL_3,125,65,31,14
+    PUSHBUTTON      "查看",IDC_LOOK_MODIFY_1,181,65,31,14
+    GROUPBOX        "改错题",IDC_STATIC,169,40,136,70
+    GROUPBOX        "第一题",IDC_STATIC,175,53,42,50
+    GROUPBOX        "第二题",IDC_STATIC,221,52,38,50
+    GROUPBOX        "第三题",IDC_STATIC,263,53,40,50
+    PUSHBUTTON      "答题",IDC_ANSWER_MODIFY_1,181,84,31,14
+    PUSHBUTTON      "查看",IDC_LOOK_MODIFY_2,223,65,31,14
+    PUSHBUTTON      "答题",IDC_ANSWER_MODIFY_2,223,85,31,14
+    PUSHBUTTON      "答题",IDC_ANSWER_MODIFY_3,267,86,31,14
+    PUSHBUTTON      "查看",IDC_LOOK_MODIFY_3,267,65,31,14
+    PUSHBUTTON      "查看",IDC_LOOK_DESIGN_1,321,66,31,14
+    GROUPBOX        "设计题",IDC_STATIC,309,40,136,70
+    GROUPBOX        "第一题",IDC_STATIC,315,54,42,50
+    GROUPBOX        "第二题",IDC_STATIC,361,54,38,50
+    GROUPBOX        "第三题",IDC_STATIC,403,54,40,50
+    PUSHBUTTON      "答题",IDC_ANSWER_DESIGN_1,321,85,31,14
+    PUSHBUTTON      "查看",IDC_LOOK_DESIGN_2,363,66,31,14
+    PUSHBUTTON      "答题",IDC_ANSWER_DESIGN_2,363,86,31,14
+    PUSHBUTTON      "答题",IDC_ANSWER_DESIGN_3,407,87,31,14
+    PUSHBUTTON      "查看",IDC_LOOK_DESIGN_3,407,66,31,14
+    LTEXT           "程序控制显示",IDC_TESTINFO,30,17,239,12
+END
+
+IDD_ENTRY DIALOGEX 0, 0, 404, 298
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "确认",IDOK,"Button",BS_OWNERDRAW | BS_BITMAP | 
+                    WS_TABSTOP,267,255,76,30
+    CONTROL         "退出",IDCANCEL,"Button",BS_OWNERDRAW | BS_BITMAP | 
+                    WS_TABSTOP,88,255,74,28,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_NUMBER,177,174,96,14,ES_AUTOHSCROLL,
+                    WS_EX_TRANSPARENT
+    CONTROL         135,IDC_STATIC,"Static",SS_BITMAP,1,1,38,34
+END
+
+IDD_WAITSTART DIALOG DISCARDABLE  0, 0, 240, 153
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "等待考试开始"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "考生学号:",IDC_STATIC,30,25,41,11
+    LTEXT           "考生姓名:",IDC_STATIC,31,62,44,11
+    LTEXT           "考试时间:",IDC_STATIC,31,102,43,11
+    EDITTEXT        IDC_WAITNUM,77,21,92,19,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_WAITNAME,77,59,92,19,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_WAITTIME,77,97,92,19,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "分钟",IDC_STATIC,179,108,17,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "TestClient Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "TestClient\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2009\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "TestClient.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "TestClient 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 76
+    END
+
+    IDD_TESTCLIENT_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 455
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 296
+    END
+
+    IDD_WAITSTART, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 146
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SENDU               BITMAP  DISCARDABLE     "程序图片\\交卷_正常.bmp"
+IDB_SENDD               BITMAP  DISCARDABLE     "程序图片\\交卷_按下.bmp"
+IDB_WELCOME             BITMAP  DISCARDABLE     "welcome.bmp"
+IDB_START               BITMAP  DISCARDABLE     "程序图片\\start.bmp"
+IDB_STARTONFOCUS        BITMAP  DISCARDABLE     "程序图片\\startOnfocus.bmp"
+IDB_EXIT                BITMAP  DISCARDABLE     "程序图片\\exit.bmp"
+IDB_EXITONFOCUS         BITMAP  DISCARDABLE     "程序图片\\extiOnfocus.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "程序图片\\chinaz1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 TestClient(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\TestClient.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

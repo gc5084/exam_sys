@@ -1,0 +1,56 @@
+UINT SelectFunc(LPVOID pParam)线程函数中：
+
+AfxBeginThread(MyRecvFunc,&tempSock);语句给线程传的是地址，可能在线程还未开启时 tempSock就被tempSock = listSock.GetNext(pos);语句改变。
+暂时的解决方法是改为值传递
+如下：
+AfxBeginThread(MyRecvFunc,(LPVOID)tempSock);
+若想保留值传递，
+可以用线程等待。顺便熟悉一下内核的使用。（稍后完成此任务）
+
+---客户端重复登陆未出现提示
+   已解决 ： 没有AfxMessageBox显示而已 还调试了老白天 晕
+
+---服务器退出 客户机要关闭
+
+---各项操作自动刷新
+
+---时间有时不正常
+   已解决 ： 原因（时间为零是截断里字符串）时间以1为基础
+
+——一开始客户端就要有时间
+   已解决：在确认姓名时就发送时间信息
+
+
+——交卷速度慢
+   已解决：因为接受时间信息枷锁后阻塞，交卷函数发送部分枷锁执行so无法执行发送，直到有时间消息从服务器来，时间才解锁，交卷才能执行。
+
+
+——阅卷有失误 
+可能因为上次的answer还在这次的就没编译过没有生成answer，而上次的answer就是这次预期的输出答案
+
+——检查对话框没有办法显示 弹出错误对话框
+   已解决：在初始化对话框函数中静态文本ID为ID_STATIC 把ID改成别的就好了
+
+——显示属性页出现断言错误
+   已解决：原因有二 一：在属性页构造函数中调用GetParent，但属性页的构造是由属性表单构造产生的 而此时属性表单还未构造完成。把GetParent放在OnInitDialog函数中暂解决问题
+         二： 重载DoDataExchange函数时 写成了DoDataExChange（c大写了），一致没有重载成，DDX_Control就没有被执行，所以在OnInitDialog函数执行到m_EditNum.SetWindowText(arrStu[m_nStu]->strNum);时发生断言错误，m_EditNum还没有挂接上一个资源。
+
+
+——标志位明明正确就是不对
+   if(nFlag&FLAG_START != FLAG_START)  //这样就不对了
+
+   int tt=nFlag&FLAG_START;
+   int rr = FLAG_START;
+   if(tt != rr)                    //这样才行，搞什么啊
+
+   已解决:是优先级问题 if((nFlag&FLAG_START) != FLAG_START) 就行了 &的优先级比!=低吗？
+
+
+
+——ADO连接Excel
+str.Format("Provider=Microsoft.Jet.OLEDB.4.0;Persist Security Info=False;Data Source=%s;Extended Properties=Excel 8.0;",strPathName);中把Data Source写成DataSource，找了一下午！
+
+
+——看C++模板——
+
+
